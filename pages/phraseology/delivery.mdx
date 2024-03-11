@@ -1,0 +1,47 @@
+import { Callout } from "nextra/components";
+
+## Quelle est la phraseologie utilisée par le contrôleur prévol ?
+
+Pour rappel, le contrôleur prévol (_ou Delivery en anglais_) est chargé de l'autorisation de mise en route IFR mais il ne gère pas les aéronefs évoluant en VFR.
+
+### Paramètres pour le départ
+
+Expression utilisée afin d'obtenir les paramètres relative à l'aérodrome lorsque l'ATIS ne peut les fournir (e.g. sur des aérodromes avec agent AFIS où aucun ATIS n'est disponible, sur des aérodromes contrôlés sans ATIS).
+
+| 🇫🇷                                                                                                                                                     | 🇺🇸                                                                                                                                          |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------- |
+| P: [_Biarritz Prévol_], **AFR224**, Demande paramètres pour le départ.                                                                                 | P: [_Biarritz Delivery_], **AFR224**, Request departure information.                                                                        |
+| ATC: **AFR224**, piste 27, vent 240 degrés 10 nœuds, visibilité 5 kilomètres, température 16, QNH 1020, niveau de transition 060, il est 10 heures 22. | ATC: **AFR224**, runway 27, wind 240 degrees 10 knots, visibility 5 kilometers, temperature 16, QNH 1020, transition level 060, time 10:22. |
+| P: Piste 27, QNH 1020, **AFR224**.                                                                                                                     | P: Runway 27, QNH 1020, **AFR224**.                                                                                                         |
+
+### Mise en route IFR
+
+Expression utilisée pour obtenir l'autorisation de mise en route IFR. Cette demande s'effectue au poste de stationnement, avant le repoussage.
+
+| 🇫🇷                                                                                                                               | 🇺🇸                                                                                                            |
+| -------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- |
+| P: [_Biarritz Prévol_], **AFR224**, demande mise en route pour Lyon, information Bravo.                                          | P: [_Biarritz Delivery_], **AFR224**, request startup to Lyon, Bravo information.                             |
+| ATC: **AFR224**, mise en route approuvée, la piste en service est la 27, départ SOVOS2F, montée initiale 070, transpondeur 1000. | ATC: **AFR224**, startup approved, active runway is 27, SOVOS2F departure, initial climb 070, squawk 1000.    |
+| P: Mise en route approuvée, piste 27, départ SOVOS2F, montée initiale 070, transpondeur 1000, **AFR224**.                        | P: Startup approved, runway 27, SOVOS2F departure, initial climb 070, squawk 1000, **AFR224**.                |
+| ATC: **AFR224**, relecture correcte, rappellez (prêt au repoussage/pour la mise en route technique) [_sur Biarritz Sol 121.950_] | ATC: **AFR224**, readback correct, call ready for (pushback/technical startup) [_on Biarritz Ground 121.950_] |
+
+<Callout type="warning">
+  Vous devez vérifier que l'information ATIS est bien donné par le pilote et
+  qu'elle est bien à jour. Si ce n'est pas le cas, dans votre réponse, vous
+  devez préciser l'information ATIS actuelle.
+</Callout>
+
+<Callout type="info">
+  Pour connaître les informations à donner, notamment pour le départ et la
+  montée initiale, vous devez vous référez au plan de vol de l'aéronef et à la
+  fiche de l'aéroport concerné.
+</Callout>
+
+Dans le cas où le plan de vol n'indique pas une SID mais un direct (eg. `BIDAC`), il faut donner une autorisation de départ omnidirectionnel, en utilisant la phraseologie suivante :
+
+| 🇫🇷                                                                                                                                                     | 🇺🇸                                                                                                                                     |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------- |
+| P: [_Biarritz Prévol_], **AFR224**, demande mise en route pour Lyon, information Bravo.                                                                | P: [_Biarritz Delivery_], **AFR224**, request startup to Lyon, Bravo information.                                                      |
+| ATC: **AFR224**, mise en route approuvée, la piste en service est la 27, départ omnidirectionnel, monter dans l'axe jusqu'à 2,6 Nm, transpondeur 1000. | ATC: **AFR224**, startup approved, active runway is 27, omni-directional departure, climb on the centerline up to 2.6 Nm, squawk 1000. |
+| P: Mise en route approuvée, piste 27, départ omnidirectionnel, monter dans l'axe jusqu'à 2,6 Nm, transpondeur 1000, **AFR224**.                        | P: Startup approved, runway 27, omni-directional departure, climb on the centerline up to 2.6 Nm, squawk 1000, **AFR224**.             |
+| ATC: **AFR224**, relecture correcte, rappellez (prêt au repoussage/pour la mise en route technique) [_sur Biarritz Sol 121.950_]                       | ATC: **AFR224**, readback correct, call ready for (pushback/technical startup) [_on Biarritz Ground 121.950_]                          |
