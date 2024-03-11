@@ -54,12 +54,9 @@ const config: DocsThemeConfig = {
     );
   },
   useNextSeoProps() {
-    const { asPath } = useRouter();
-    if (asPath !== "/") {
-      return {
-        titleTemplate: "%s - ATC Guide",
-      };
-    }
+    return {
+      titleTemplate: "%s - ATC Guide",
+    };
   },
   banner: {
     key: "do-not-use-for-real-aviation",
