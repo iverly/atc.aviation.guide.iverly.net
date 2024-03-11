@@ -3,7 +3,7 @@ import { useConfig, type DocsThemeConfig } from "nextra-theme-docs";
 import React from "react";
 
 const config: DocsThemeConfig = {
-  logo: <strong>Faast</strong>,
+  logo: <strong>ATC Guide</strong>,
   docsRepositoryBase:
     "https://github.com/iverly/atc.aviation.guide.iverly.net/tree/main/",
   project: {
