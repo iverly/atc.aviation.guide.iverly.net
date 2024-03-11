@@ -1,0 +1,45 @@
+## common temp file patterns
+*~
+*.*~
+.#*
+\#*#
+.*.sw[a-z]
+
+## editors and ides
+
+### emacs
+*~
+\#*\#
+/.emacs.desktop
+/.emacs.desktop.lock
+.elc
+auto-save-list
+tramp
+.\#*
+
+### vim
+*.un~
+Session.vim
+
+## os-specific noise files
+
+### linux flavors
+.directory
+
+### osx
+.DS_Store
+._*
+.Spotlight-V100
+.Trashes
+
+### windows
+Desktop.ini
+$RECYCLE.BIN/
+Thumbs.db 
+
+## tags, gtags, etags, ctags
+GPATH
+GRTAGS
+GSYMS
+GTAGS
+TAGS
