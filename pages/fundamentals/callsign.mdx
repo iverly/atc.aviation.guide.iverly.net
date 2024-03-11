@@ -1,0 +1,80 @@
+import { Callout } from "nextra/components";
+
+## Comment fonctionne un callsign ?
+
+Le callsign (_ou indicatif d'appel en français_) est la désignation d'une station (aéronef ou station de contrôle) émettant en fréquence. Ce callsign est unique pour chaque station.
+
+### Callsign d'une station de contrôle
+
+#### Composition de l'indicatif d'appel
+
+Les stations de contrôle au sol de la navigation aérienne et d'information de vol sont identifiées par :
+
+- le nom de l'emplacement (Lille, Lognes, De Gaulle, etc)
+- un suffixe désignant la position (Prévol, Sol, Tour, Départ, Approche, Contrôle)
+
+#### Les différents types de stations de contrôle
+
+| Suffixe IVAO | Désignation en français | Désignation en anglais | Rôle                                        |
+| ------------ | ----------------------- | ---------------------- | ------------------------------------------- |
+| `DEL`        | Prévol                  | Delivery               | Gestion des plans de vol et des départs     |
+| `GND`        | Sol                     | Ground                 | Gestion des mouvements au sol               |
+| `TWR`        | Tour                    | Tower                  | Gestion des décollages et des atterrissages |
+| `DEP`        | Départ                  | Departure              | Gestion des départs                         |
+| `APP`        | Approche                | Approach               | Gestion des arrivées                        |
+| `CTR`        | Contrôle                | Control                | Gestion de l'espace aérien                  |
+
+<Callout type="warning">
+  Les positions FSS ne sont pas ouvrables en France (hors évènement). Le service
+  d'information de vol VFR peut être assuré par le contrôleur Approche (APP)
+  associé à la TMA en question.
+</Callout>
+
+<Callout type="error">
+  Bien qu'utilisées dans certains pays limitrophes à la France, les désignations
+  "Radar" et "Centre" ne sont pas employées pour les positions de contrôle
+  françaises.
+</Callout>
+
+### Callsign d'un aéronef
+
+#### Composition de l'indicatif d'appel
+
+L'indicatif d'appel des aéronefs appartient à une des types suivants (réglementation SERA.14050) :
+
+- Type a : Caractères correspondant aux marques d'immatriculation de l'aéronef
+- Type b : Indicatif téléphonique de l'exploitant de l'aéronef suivi des quatre derniers caractères des marques d'immatriculation de l'aéronef
+- Type c : Indicatif téléphonique de l'exploitant d'aéronef suivi de l'identification du vol
+
+##### Exemples d'indicatif d'appel
+
+- Type a : `FGHKD`, `N51795`, `CESSNA FABCD`
+- Type b : `Air France GRHV`
+- Type c : `Ryanair 70DZ`
+
+#### Possible abréviations
+
+Les indicatifs d'appel radiotéléphonique des aéronefs peuvent être abrégés :
+
+- Type a : Premier caractère de l'immatriculation et au moins les deux derniers caractères de l'indicatif d'appel
+- Type b : Indicatif téléphonique de l'exploitant d'aéronef suivi d'au moins les deux derniers caractères de l'indicatif d'appel
+- Type c : Pas de forme abrégée
+
+##### Exemples d'indicatif d'appel abrégé
+
+| Type d'indicatif | Indicatif complet | Forme abrégé                        |
+| ---------------- | ----------------- | ----------------------------------- |
+| a                | `FGHKD`           | `FKD`                               |
+| b                | `Air France GRHV` | `Air France HV` ou `Air France RHV` |
+| c                | `Ryanair 70DZ`    | Pas de forme abrégée                |
+
+<Callout type="warning">
+  Lorsque vous n'utilisez pas le nom d'un exploitant, vous devez utiliser
+  l'alphabet aéronautique pour épeler les lettres de l'indicatif d'appel.
+</Callout>
+
+<Callout type="info">
+  Les indicatifs d'appel des aéronefs sont attribués par l'exploitant de
+  l'aéronef. Ils sont uniques pour chaque aéronef et sont utilisés pour les
+  communications radiotéléphoniques.
+</Callout>
