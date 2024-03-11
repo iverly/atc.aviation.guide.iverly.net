@@ -1,5 +1,10 @@
 {
   "index": "Introduction",
+  "-- Getting started --": {
+    "type": "separator",
+    "title": "Getting started"
+  },
+  "how-to-start": "Comment débuter ?",
   "ivao": {
     "title": "IVAO ↗",
     "type": "page",
