@@ -6,6 +6,11 @@
   },
   "how-to-start": "Comment débuter ?",
   "fundamentals": "Fontamentaux",
+  "-- Wiki --": {
+    "type": "separator",
+    "title": "Wiki"
+  },
+  "positions": "Les différentes positions",
   "ivao": {
     "title": "IVAO ↗",
     "type": "page",

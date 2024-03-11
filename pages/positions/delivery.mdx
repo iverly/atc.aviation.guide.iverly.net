@@ -1,0 +1,36 @@
+import { Callout } from "nextra/components";
+
+## Qu'est ce que la position prévol ?
+
+Le contrôleur prévol (_ou Delivery en anglais_) est chargé de l'autorisation de mise en route IFR mais il ne gère pas les aéronefs évoluant en VFR.
+
+<Callout type="warning">
+  La position `DEL` n'est ouvrable que lorsqu'il y a un contrôleur `GND` en
+  ligne.
+</Callout>
+
+## Les responsabilités
+
+### Vérification du plan de vol
+
+Le contrôleur prévol est chargé de vérifier que le plan de vol est cohérent et complet. Il doit s'assurer que les informations suivantes sont présentes :
+
+- le code OACI de l'aéroport de départ
+- le code OACI de l'aéroport d'arrivée
+- l'aéronef et ses équipements, en particulier si l'appareil est équipé `RNAV` (i.e. équipement R coché et PBN décrits en case 18 du plan de vol)
+- le régime de vol
+- l'altitude ou niveau de vol de croisière qui doit être utilisable et cohérent
+- la route qui doit être en adéquation avec le vol
+
+### Clairance de mise en route IFR
+
+Le contrôleur prévol est chargé de donner la clairance de mise en route IFR. Cette clairance doit contenir les informations suivantes :
+
+- La procédure SID ou la procédure de départ omnidirectionnel
+- La piste en service
+- Le niveau (ou altitude) initial(e)
+- Le code transpondeur
+
+### Transfert
+
+Le contrôleur prévol est également chargé de transférer les aéronefs à la position suivante, en général la position `GND`.

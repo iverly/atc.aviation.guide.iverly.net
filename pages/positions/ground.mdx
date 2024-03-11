@@ -1,0 +1,46 @@
+import { Callout } from "nextra/components";
+
+## Qu'est ce que la position sol ?
+
+Le contrôleur sol (_ou Ground en anglais_) est chargé de gérer les mouvements des aéronefs au sol. Il est en charge de la gestion des aéronefs sur les aires de stationnement, les voies de circulation et les pistes.
+
+## Les responsabilités
+
+Le contrôleur sol gère :
+
+- le roulage des aéronefs de la sortie de l'aire de trafic vers la piste
+- le roulage des aéronefs des points d'attentes après le dégagement de piste vers l'aire de trafic
+
+<Callout type="warning">
+  Si la position `DEL` n'est pas ouverte, le contrôleur devra assumer cette
+  fonction.
+</Callout>
+
+### Gestion du repoussage
+
+Pour les postes de stationnement le nécessitant, le contrôleur doit autoriser les aéronefs s'y trouvant à repousser.
+
+Le repoussage doit être autorisé de manière à exclure toute collision au sol entre deux aéronefs.
+Le sens de repoussage ainsi que la voie de circulation peuvent être précisés afin que le contrôleur puisse, par la suite, donner l'autorisation de roulage de manière stratégique.
+
+<Callout type="info">
+  Certains postes de stationnement ne nécessite pas de repoussage, la gestion de
+  la mise en route technique est alors assurée par le contrôleur.
+</Callout>
+
+### Gestion du roulage
+
+L'autorisation de roulage doit être la plus concise possible. Il faudra veiller à :
+
+- Éviter de éviter de donner une longue série de voies de circulation
+- Attribuer un ordre de priorité en cas de conflit au roulage
+- Fournir la TORA en cas d'utilisation d'un point d'attente intermédiaire si la configuration du terrain et de l'aéronef l'exige.
+
+<Callout type="info">
+  Le contrôleur doit guider les aéronefs qui apparaissent ou qui se signalent en
+  difficulté.
+</Callout>
+
+### Transfert
+
+Le contrôleur `GND` est également en charge de transférer les aéronefs à la position suivante, en général la position `TWR`.
