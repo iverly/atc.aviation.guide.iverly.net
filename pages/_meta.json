@@ -1,0 +1,22 @@
+{
+  "index": "Introduction",
+  "advanced": "Advanced (A Folder)",
+  "ivao": {
+    "title": "IVAO ↗",
+    "type": "page",
+    "href": "https://ivao.fr",
+    "newWindow": true
+  },
+  "ivao-start-atc": {
+    "title": "Débuter comme ATC ↗",
+    "type": "page",
+    "href": "https://www.ivao.fr/fr/pages/training/getting-started-atc",
+    "newWindow": true
+  },
+  "ivao-docs": {
+    "title": "Documentation ↗",
+    "type": "page",
+    "href": "https://wiki.ivao.fr/fr/home",
+    "newWindow": true
+  }
+}
