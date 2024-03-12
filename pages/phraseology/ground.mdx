@@ -3,3 +3,61 @@ import { Callout } from "nextra/components";
 ## Qu'est ce que la position sol ?
 
 Pour rappel, le contrôleur sol (_ou Ground en anglais_) est chargé de gérer les mouvements des aéronefs au sol. Il est en charge de la gestion des aéronefs sur les aires de stationnement, les voies de circulation et les pistes.
+
+### Mise en route VFR
+
+Expression utilisée pour obtenir l'autorisation de mise en route VFR. Cette demande s'effectue au poste de stationnement, avant le repoussage.
+
+| 🇫🇷                                                                                                                                               | 🇺🇸                                                                                                     |
+| ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------ |
+| P: [Biarritz Sol], **F-GABC**, demande mise en route (pour des tours de piste).                                                                  | P: [Biarritz Ground], **F-GABC**, request startup (for circuits).                                      |
+| ATC: **F-GABC**, mise en route approuvée, (pour des tours de piste main gauche/droite), la piste 27 est en service, QNH 1013, transpondeur 7000. | ATC: **F-GABC**, startup approved, (for left/right circuits), runway 27 in use, QNH 1013, squawk 7000. |
+| P: Mise en route approuvée, (pour des tours de piste main gauche/droite), la piste 27 est en service, QNH 1013, transpondeur 7000, **F-GABC**.   | P: Startup approved, (for left/right circuits), runway 27 in use, QNH 1013, squawk 7000, **F-GABC**.   |
+| ATC: **F-GABC**, relecture correcte, rappellez (prêt au repoussage/pour la mise en route technique).                                             | ATC: **F-GABC**, readback correct, call (ready for pushback/for engine start).                         |
+
+### Repoussage
+
+Expression utilisée pour demander l'autorisation de repousser l'avion de la porte.
+
+| 🇫🇷                                                                                           | 🇺🇸                                                                                     |
+| -------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| P: [Biarritz Sol], **AFR224**, demande repoussage.                                           | P: [Biarritz Ground], **AFR224**, request pushback.                                    |
+| ATC: **AFR224**, repoussage approuvé face à l'Est (en fonction du 737 passant derrère vous). | ATC: **AFR224**, pushback approved, face East according to the 737 passing behind you. |
+| P: Repoussage approuvé face à l'Est (en fonction du 737 en vue), **AFR224**.                 | P: Pushback approved, face East (according to the 737 in sight), **AFR224**.           |
+
+### Mise en route technique
+
+Expression utilisée pour demander l'autorisation de démarrer les moteurs.
+
+| 🇫🇷                                                              | 🇺🇸                                                      |
+| --------------------------------------------------------------- | ------------------------------------------------------- |
+| P: [Biarritz Sol], **AFR224**, demande mise en route technique. | P: [Biarritz Ground], **AFR224**, request engine start. |
+| ATC: **AFR224**, mise en route technique approuvée.             | ATC: **AFR224**, engine start approved.                 |
+| P: Mise en route technique approuvée, **AFR224**.               | P: Engine start approved, **AFR224**.                   |
+
+### Roulage
+
+Expression utilisée pour demander l'autorisation de rouler.
+
+| 🇫🇷                                                                                                                                   | 🇺🇸                                                                                                                  |
+| ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------- |
+| P: [Biarritz Sol], **AFR224**, demande roulage.                                                                                      | P: [Biarritz Ground], **AFR224**, request taxi.                                                                     |
+| ATC: **AFR224**, (laissez passer l'Airbus 320 venant de votre droite), rouler jusqu'au point d'attente de la piste 27 via C, N.      | ATC: **AFR224**, (give way to the Airbus 320 coming from your right), taxi to holding point runway 27 via C, N.     |
+| P: (On laisse passer l'Airbus 320 venant de notre droite et), on roule jusqu'au point d'attente de la piste 27 via C, N, **AFR224**. | P: (We give way to the Airbus 320 coming from our right and), taxi to holding point runway 27 via C, N, **AFR224**. |
+
+Dans le cas où l'aéronef est un hélicoptère, l'expression `roulage` est remplacée par `translater` et l'expression `point d'attente` est remplacée par `fato`.
+
+| 🇫🇷                                                     | 🇺🇸                                              |
+| ------------------------------------------------------ | ----------------------------------------------- |
+| P: [Biarritz Sol], **HEL224**, demande translater.     | P: [Biarritz Ground], **HEL224**, request taxi. |
+| ATC: **HEL224**, translatez jusqu'au fato 27 via C, N. | ATC: **HEL224**, taxi to fato 27 via C, N.      |
+| P: On translate jusqu'au fato 27 via C, N, **HEL224**. | P: Taxi to fato 27 via C, N, **HEL224**.        |
+
+### Gérer le trafic
+
+Expression utilisée pour demander à un aéronef de maintenir la position.
+
+| 🇫🇷                                                                                                                            | 🇺🇸                                                                                                     |
+| ----------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------ |
+| ATC: **AFR224**, maintenez la position (avant la prochaine intersection pour laisser passer un Airbus Droite vers la Gauche.) | ATC: **AFR224**, hold position (before the next intersection to give way to an Airbus Right to Left.)  |
+| P: Maintenons la position (avant la prochaine intersection pour laisser passer un Airbus Droite vers la Gauche), **AFR224**.  | P: Holding position (before the next intersection to give way to an Airbus Right to Left), **AFR224**. |
